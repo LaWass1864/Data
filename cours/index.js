@@ -41,6 +41,18 @@ let data = [
         age: 42,
         technos: ["React", "NodeJs", "php"],
         admin: true,
+    },
+    {
+        pseudo : "Nicolas",
+        age: 42,
+        technos: ["React", "NodeJs", "php"],
+        admin: true,
+    },
+    {
+        pseudo : "Nicolas",
+        age: 42,
+        technos: ["React", "NodeJs", "php"],
+        admin: true,
     }
 ];
 // console.log(data[1].technos[1])
@@ -59,7 +71,29 @@ if (data[0].age > data[1].age) {
 
 let w = 0;
 
-while (w > 100) {
+while (w < 100) {
     w++;
-    console.log("La valeur de w est de : " + w)
+    // console.log("La valeur de w est de : " + w)
+}
+
+// Do while
+
+let d = 0;
+
+do {
+    d++;
+    // console.log(d);
+    
+} while (d < 5)
+
+// Les boucles For
+// Avec les guillemets de la touche 7 on peut mettre des variables sans +
+
+for (const utilisateurs of data)  {
+    document.body.innerHTML += `<li>${utilisateurs.pseudo} - ${utilisateurs.age} ans - technos préférées : ${utilisateurs.technos} </li>`;
+}
+
+// On déclare la valeur de i / on dit jusqu'où on boucle / incrementer i si la condition 2 n'est pas remplie
+for (i = 0; i < data.length; i++) {
+    console.log(data[i].technos[0])
 }
