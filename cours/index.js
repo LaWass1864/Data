@@ -3,4 +3,11 @@
 let string = "je suis une phrase";
 let number = 34;
 let boolean = true;
-let 
+let maVariable;
+
+// Tableaux
+
+let array = []
+
+console.log(array)
+
