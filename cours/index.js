@@ -33,7 +33,7 @@ let data = [
     },
     {
         pseudo : "Samia",
-        age: 14,
+        age: 102032252009,
         technos: ["Css", "Html", "php"],
         admin: false,
     }, {
@@ -55,45 +55,14 @@ let data = [
         admin: true,
     }
 ];
-// console.log(data[1].technos[1])
-
-
-// Les structures de controle
+// console.log(data[2].technos[2])
 
 if (data[0].age > data[1].age) {
-    console.log(data[0].pseudo +  " est plus agé que " + data[1].pseudo)
+    // alert(data[0].pseudo + " est plus jeune que " + data[1].pseudo );
+    // valeur si vrai
+} else {
+//    document.body.style.background = "red";
+// valeur si faux
 }
 
-// Fonction ternaire, sur une seule ligne.
-// valeur à tester ? si vrai : si faux
-
-// While
-
-let w = 0;
-
-while (w < 100) {
-    w++;
-    // console.log("La valeur de w est de : " + w)
-}
-
-// Do while
-
-let d = 0;
-
-do {
-    d++;
-    // console.log(d);
-    
-} while (d < 5)
-
-// Les boucles For
-// Avec les guillemets de la touche 7 on peut mettre des variables sans +
-
-for (const utilisateurs of data)  {
-    document.body.innerHTML += `<li>${utilisateurs.pseudo} - ${utilisateurs.age} ans - technos préférées : ${utilisateurs.technos} </li>`;
-}
-
-// On déclare la valeur de i / on dit jusqu'où on boucle / incrementer i si la condition 2 n'est pas remplie
-for (i = 0; i < data.length; i++) {
-    console.log(data[i].technos[0])
-}
+// 
