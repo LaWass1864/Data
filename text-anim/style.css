@@ -25,6 +25,11 @@ body {
   right: -5px;
   animation: anim 0.8s linear infinite;
 }
+
+span {
+  color:rgb(113, 41, 41);
+}
+
 @keyframes anim {
   50% {
     opacity: 0.1;
