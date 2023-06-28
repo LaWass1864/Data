@@ -33,7 +33,7 @@ let data = [
     },
     {
         pseudo : "Samia",
-        age: 102032252009,
+        age: 35,
         technos: ["Css", "Html", "php"],
         admin: false,
     }, {
@@ -43,13 +43,13 @@ let data = [
         admin: true,
     },
     {
-        pseudo : "Nicolas",
+        pseudo : "Carole",
         age: 42,
         technos: ["React", "NodeJs", "php"],
         admin: true,
     },
     {
-        pseudo : "Nicolas",
+        pseudo : "John",
         age: 42,
         technos: ["React", "NodeJs", "php"],
         admin: true,
@@ -65,4 +65,55 @@ if (data[0].age > data[1].age) {
 // valeur si faux
 }
 
-// 
+// while : tant que
+
+let w = 0; 
+
+while (w < 3) {
+    w++;
+    // alert("la valeur de w est de : " + w);
+}
+
+// do while 
+let d = 0;
+
+do {
+    d++;
+    // console.log(d)
+} while (d < 5);
+
+// Boucles for
+// guillemets de la touche 7 permettent de ne pas mettre de + 
+
+for (const user of data ) {
+//    document.body.innerHTML += `<li>${user.pseudo} / ${user.age} ans / ${user.technos} </li>`;
+    
+}
+
+// d'abord on déclare la valeur de i ensuite jusque ou on boucle et incrementer si la condition 2 n'est pas remplis
+for (i = 0; i < data.length; i++) {
+    //document.body.innerHTML += "<h2>" + data[i].technos.join (' / ') + "</h2>";
+    
+}
+
+// Switch
+
+document.body.addEventListener('click', (e) => {
+    console.log(e.target.id)
+
+    switch(e.target.id) {
+        case "javascript":
+            document.body.style.background = "yellow";
+            break;
+        case "php":
+            document.body.style.background = "violet";
+            break;
+        case "python":
+            document.body.style.background = "blue";
+            break;
+            default:
+                null;
+
+    }
+})
+
