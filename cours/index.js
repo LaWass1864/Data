@@ -117,3 +117,120 @@ document.body.addEventListener('click', (e) => {
     }
 })
 
+document.body.addEventListener('click', (e) => {
+    
+
+    switch (e.target.id) {
+        case "hello":
+            document.body.style.background = "pink";
+            break;
+        case "hi":
+            document.body.style.background = "green";
+            break;
+        case "ola":
+            document.body.style.background = "brown";
+            break;    
+        default:
+            null;
+    }
+})
+
+
+// Méthodes string. Une méthode est une fonction dont on a acces. Comme le addEventListener 
+
+let string2 = "JavaScript est un langage oriénté objet";
+// parseInt = transforme string en number
+console.log(typeof "42");
+console.log(typeof parseInt("42"));
+// isNan pour distinguer si c'est un chiffre ou non
+console.log(isNaN("--48"));
+// Pour mesurer une chaine de caractere
+console.log(string2.length);
+// Connaitre le dernier caractere de cette chaine
+console.log(string2[string2.length - 9]);
+// Indexof, retourne -1 si il ne connait pas
+console.log(string2.indexOf("é"));
+// il découpe de 15 a 20 caracteres. Utile dans une BDD 
+let newString = string2.slice(15, 20);
+console.log(newString)
+// Split, permet de séparer les variables
+console.log(string2.split("t"))
+// lowerCase : pour les inputs par exemple, cela transforme les données
+console.log(string2.toLocaleUpperCase())
+//Replace
+console.log(string2.replace("JavaScript", "Is the best"))
+
+// Méthodes pour les numbers
+let numbers = 43.289;
+let numberString = "42.12 est un chiffre";
+// garder des chiffres aprés la virgule
+console.log(numbers.toFixed(2))
+// Changer une chaine de caractere en number
+console.log(parseInt("24"))
+// pour extraire le chiffre au début
+console.log(parseInt(numberString))
+// on garde la virgule et le nombre
+console.log(parseFloat(numberString))
+
+
+// Mathrandom
+
+console.log(Math.PI)
+// Arrondir au sup
+console.log(Math.round(4.5))
+// arrondire au inf
+console.log(Math.floor(4.5))
+// arrondir au plu haut
+console.log(Math.ceil(4.1))
+// Puissances
+console.log(Math.pow(5, 5))
+// Racine carré
+console.log(Math.sqrt(8))
+// Math.random
+console.log(Math.floor(Math.random() * 50))
+
+// Méthode pour les tableaux
+let array3 = ["Javascript", "Php", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+// Additionner 2 tableaux 
+let newArray = array3.concat(array4)
+console.log(newArray);
+// Spraid operateur
+let newArrayA = [...array3, ...array4]
+console.log(newArrayA)
+
+// Ajouter des caracteres 
+console.log(array3.join("&"));
+
+// Slice = découpage 
+console.log(newArray.slice(3, 5));
+
+// IndexOf
+console.log(array3.indexOf("JavaScript"));
+
+array3.forEach((languages) => console.log(languages));
+
+// Est ce que dans chacun de ces éléments il y a cet élément
+// every = tous
+console.log(array3.every((language) => language == "Php"))
+// Est ce qu'il y a écrit php qql part // au moins un parmis eux
+console.log(array3.some((language) => language == "Php"))
+
+// Shift : permet de suppr le premier element du tableau
+let shift = array3.shift()
+console.log(shift);
+// Pop : permet de suppr le dernier element
+let shiftA = array3.pop()
+console.log(shiftA);
+// Splice
+const restArray = array3.splice(0, 2, ...array4);
+console.log(restArray)
+
+// Important //
+let arrayNumber = [4,74,28,12,1]
+// additionner de tableaux
+console.log(arrayNumber.reduce((x,y) => x + y))
+// Ajouter un élément dans un tableau
+arrayNumber.push(89)
+console.log(arrayNumber)
