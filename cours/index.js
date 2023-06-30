@@ -228,9 +228,23 @@ const restArray = array3.splice(0, 2, ...array4);
 console.log(restArray)
 
 // Important //
-let arrayNumber = [4,74,28,12,1]
+let arrayNumber = [10,4,74,28,12,1]
 // additionner de tableaux
 console.log(arrayNumber.reduce((x,y) => x + y))
 // Ajouter un élément dans un tableau
 arrayNumber.push(89)
-console.log(arrayNumber)
+console.log(arrayNumber);
+
+
+// On nomme le tableau ou lobjet + application de la méthode + (parametre) 
+// Filter SORT MAP
+// le "." c'est comme une addition 
+console.log(arrayNumber
+        .filter((nina) => nina > 10))
+// On l'agrémente souvent de paramétres, ici c'est dans l'ordre croissant
+console.log(arrayNumber.sort((a, b) => a - b));
+// Enumeration de tous les chiffres
+arrayNumber.map((number) => console.log(number))
+arrayNumber.map((number) => console.log(number))
+
+document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join("");
