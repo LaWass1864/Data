@@ -6,7 +6,6 @@ let boolean = true;
 let maVariable;
 
 // Tableaux = crochet
-
 let array = ["Bordeaux", "Toulouse", "Nantes","Paris"]
 // console.log(array[2][3])
 
@@ -56,7 +55,13 @@ let data = [
     }
 ];
 // console.log(data[2].technos[2])
+// Se balader dans un objet. On met d'abord le nom du tableau[la position que l'ont choisi].propriété
 
+if (data[2].technos = data[3].technos) {
+    document.body.style.background = "blue";
+    
+    
+}
 if (data[0].age > data[1].age) {
     // alert(data[0].pseudo + " est plus jeune que " + data[1].pseudo );
     // valeur si vrai
@@ -176,6 +181,8 @@ console.log(parseFloat(numberString))
 // Mathrandom
 
 console.log(Math.PI)
+
+
 // Arrondir au sup
 console.log(Math.round(4.5))
 // arrondire au inf
@@ -247,5 +254,6 @@ console.log(arrayNumber.sort((a, b) => a - b));
 arrayNumber.map((number) => console.log(number))
 arrayNumber.map((number) => console.log(number))
 
-document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join(",");
+
+// document.body.innerHTML = arrayNumber.map((number) =>  `<h3> ${number} </h3>`).join(":");
 
