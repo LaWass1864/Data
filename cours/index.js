@@ -247,4 +247,5 @@ console.log(arrayNumber.sort((a, b) => a - b));
 arrayNumber.map((number) => console.log(number))
 arrayNumber.map((number) => console.log(number))
 
-document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join("");
+document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join(",");
+
