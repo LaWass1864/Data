@@ -255,5 +255,4 @@ arrayNumber.map((number) => console.log(number))
 arrayNumber.map((number) => console.log(number))
 
 
-// document.body.innerHTML = arrayNumber.map((number) =>  `<h3> ${number} </h3>`).join(":");
-
+// document.body.innerHTML = arrayNumber.map((number) =>  `<h3> ${number} </h3>`).join(":")
