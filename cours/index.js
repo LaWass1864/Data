@@ -199,6 +199,7 @@ console.log(Math.floor(Math.random() * 50))
 // Méthode pour les tableaux
 let array3 = ["Javascript", "Php", "Python"];
 let array4 = ["Ruby", "Solidity"];
+let arrayPrenom = ['Joe','Mickael',"Kevin"]
 
 // Additionner 2 tableaux 
 let newArray = array3.concat(array4)
@@ -210,29 +211,32 @@ console.log(newArrayA)
 // Ajouter des caracteres 
 console.log(array3.join("&"));
 
-// Slice = découpage 
+// Slice = découpage d'un array
 console.log(newArray.slice(3, 5));
 
 // IndexOf
 console.log(array3.indexOf("JavaScript"));
 
-array3.forEach((languages) => console.log(languages));
+// Elle foncitonne pour les array 
+// element individuel = langugages
+arrayPrenom.forEach((languages) => console.log(languages));
 
 // Est ce que dans chacun de ces éléments il y a cet élément
 // every = tous
-console.log(array3.every((language) => language == "Php"))
+console.log(array3.every((language) => language == "P"))
 // Est ce qu'il y a écrit php qql part // au moins un parmis eux
 console.log(array3.some((language) => language == "Php"))
 
-// Shift : permet de suppr le premier element du tableau
+// Shift : permet de suppr le premier index du tableau
 let shift = array3.shift()
 console.log(shift);
 // Pop : permet de suppr le dernier element
 let shiftA = array3.pop()
 console.log(shiftA);
-// Splice
-const restArray = array3.splice(0, 2, ...array4);
-console.log(restArray)
+// Splice : ajouter un élément a un tableau
+
+const restArray = array3.splice(0, 2, ..."Cool");
+alert(restArray)
 
 // Important //
 let arrayNumber = [10,4,74,28,12,1]
