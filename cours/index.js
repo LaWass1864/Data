@@ -274,3 +274,4 @@ document.body.innerHTML = data
     <p> Status : ${user.admin ? "Modérateur" : "Membre"}</p>
 </div>
 `).join('');
+
