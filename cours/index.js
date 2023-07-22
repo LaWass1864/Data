@@ -236,7 +236,7 @@ console.log(shiftA);
 // Splice : ajouter un élément a un tableau
 
 const restArray = array3.splice(0, 2, ..."Cool");
-alert(restArray)
+console.log(restArray)
 
 // Important //
 let arrayNumber = [10,4,74,28,12,1]
@@ -250,13 +250,27 @@ console.log(arrayNumber);
 // On nomme le tableau ou lobjet + application de la méthode + (parametre) 
 // Filter SORT MAP
 // le "." c'est comme une addition 
-console.log(arrayNumber
-        .filter((nina) => nina > 10))
+console.log(arrayNumber.filter((nina) => nina > 10))
 // On l'agrémente souvent de paramétres, ici c'est dans l'ordre croissant
 console.log(arrayNumber.sort((a, b) => a - b));
 // Enumeration de tous les chiffres
-arrayNumber.map((number) => console.log(number))
-arrayNumber.map((number) => console.log(number))
+arrayNumber.map((numbers) => (document.body.innerHTML += `<li> ${numbers} </li>`))
+// Le map applique des ','
+document.body.innerHTML = arrayNumber.map((numbers) => `<li> ${numbers} </li>`).join('');
 
 
-// document.body.innerHTML = arrayNumber.map((number) =>  `<h3> ${number} </h3>`).join(":")
+// Methodes pour objet
+// sort = tirer les users par age, c'est un objet, il faut aller se balader dedans
+document.body.innerHTML = data
+// fitlre les membres
+.filter((user) => user.admin === false)
+.filter((user) => user.pseudo.includes("i"))
+.sort((a, b) => b.age - a.age)
+// Le map affiche les objets
+.map((user) => `
+<div class="user-card">
+    <h2> ${user.pseudo}</h2>
+    <p> ${user.age}</p>
+    <p> Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+</div>
+`).join('');

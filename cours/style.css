@@ -1,3 +1,10 @@
-li {
-    text-decoration: dotted;
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+
+.user-card {
+    border: 2px solid orange;
+
 }
