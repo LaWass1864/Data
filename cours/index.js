@@ -262,7 +262,7 @@ document.body.innerHTML = arrayNumber.map((numbers) => `<li> ${numbers} </li>`).
 // Methodes pour objet
 // sort = tirer les users par age, c'est un objet, il faut aller se balader dedans
 document.body.innerHTML = data
-// fitlre les membres
+// fitlre les membres qui ne sont pas modo
 .filter((user) => user.admin === false)
 .filter((user) => user.pseudo.includes("i"))
 .sort((a, b) => b.age - a.age)
