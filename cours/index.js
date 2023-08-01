@@ -238,7 +238,7 @@ console.log(shiftA);
 const restArray = array3.splice(0, 2, ..."Cool");
 console.log(restArray)
 
-// Important //
+// Important //eps
 let arrayNumber = [10,4,74,28,12,1]
 // additionner de tableaux
 console.log(arrayNumber.reduce((x,y) => x + y))
