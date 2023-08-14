@@ -24,11 +24,17 @@ function generatePassword() {
   // cette condition va s'enumerer jusqu'à ce qu'elle fera la longueur de rangeValue.value
   for (i = 0; i < rangeValue.value; i++) {
     // Suppr les virgules + aleatoire, math.floor c'est pour aller jusqu'à 61
-
+    // Math.floor = arrondi un nombre à l'entier ou au mutliple inférieur.
+    // Math.random = nombre flottant aléatoire
     password += data[Math.floor(Math.random() * data.length)];
-    console.log(password);
+    
   }
+  // Pour un input on ne peut pas mettre un InnerHtml. 
   passwordOutput.value = password;
+
+  // Pour copier le mdp
+  passwordOutput.select();
+  navigator.clipboard.writeText(passwordOutput.value);
 }
 
 generateButton.addEventListener("click", generatePassword);
