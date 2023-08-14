@@ -35,6 +35,12 @@ function generatePassword() {
   // Pour copier le mdp
   passwordOutput.select();
   navigator.clipboard.writeText(passwordOutput.value);
+
+  generateButton.textContent = "Copié !"
+// Mettre une limite de temps pour enlever le Copié du bouton et remettre le txt content initial au bout de qql seconde
+  setTimeout(() => {
+    generateButton.textContent = "Générer mot de passe";
+  }, 700);
 }
 
 generateButton.addEventListener("click", generatePassword);
