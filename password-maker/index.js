@@ -27,17 +27,16 @@ function generatePassword() {
     // Math.floor = arrondi un nombre à l'entier ou au mutliple inférieur.
     // Math.random = nombre flottant aléatoire
     password += data[Math.floor(Math.random() * data.length)];
-    
   }
-  // Pour un input on ne peut pas mettre un InnerHtml. 
+  // Pour un input on ne peut pas mettre un InnerHtml.
   passwordOutput.value = password;
 
   // Pour copier le mdp
   passwordOutput.select();
   navigator.clipboard.writeText(passwordOutput.value);
 
-  generateButton.textContent = "Copié !"
-// Mettre une limite de temps pour enlever le Copié du bouton et remettre le txt content initial au bout de qql seconde
+  generateButton.textContent = "Copié !";
+  // Mettre une limite de temps pour enlever le Copié du bouton et remettre le txt content initial au bout de qql seconde
   setTimeout(() => {
     generateButton.textContent = "Générer mot de passe";
   }, 700);
