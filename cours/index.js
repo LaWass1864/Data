@@ -275,3 +275,35 @@ document.body.innerHTML = data
 </div>
 `).join('');
 
+
+// Les dates
+
+let date = new Date();
+console.log(date);
+
+// Timestamp : nb de secondes qui se sont ecoulées depuis 1970 en millisecondes
+
+let timestamp = Date.parse(date)
+console.log(timestamp + ' secondes');
+
+// IsoString
+console.log(date.toISOString());
+
+// Comment traiter ces dates
+let iso = date.toISOString();
+
+function dateParser(chaine) {
+    let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+        year: "numeric",
+        month : "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+    });
+    return newDate;
+}
+
+console.log(dateParser(date));
+console.log(dateParser(iso));
+console.log(dateParser(timestamp));
+
