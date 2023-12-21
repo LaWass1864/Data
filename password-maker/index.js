@@ -35,7 +35,7 @@ function generatePassword() {
   passwordOutput.select();
   navigator.clipboard.writeText(passwordOutput.value);
 
-  generateButton.textContent = "Copié !";
+  generateButton.textContent = "Copiée !";
   // Mettre une limite de temps pour enlever le Copié du bouton et remettre le txt content initial au bout de qql seconde
   setTimeout(() => {
     generateButton.textContent = "Générer mot de passe";
