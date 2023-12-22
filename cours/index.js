@@ -279,10 +279,10 @@ document.body.innerHTML = data
 // Les dates
 
 let date = new Date();
-console.log(date);
+console.log(date)
 
 // Timestamp : nb de secondes qui se sont ecoulées depuis 1970 en millisecondes
-
+// Parse : transformé en millisecondes
 let timestamp = Date.parse(date)
 console.log(timestamp + ' secondes');
 
@@ -292,6 +292,9 @@ console.log(date.toISOString());
 // Comment traiter ces dates
 let iso = date.toISOString();
 
+
+// Creation d'une fonction avec DateParser. Pour afficher un jour, un mois, une année et l'heure
+//aller voir la doc toLocalDateString
 function dateParser(chaine) {
     let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
         year: "numeric",
@@ -302,8 +305,9 @@ function dateParser(chaine) {
     });
     return newDate;
 }
-
+// les 3 formats fonctionnent pour afficher les dates
 console.log(dateParser(date));
 console.log(dateParser(iso));
+// cela fonctionne aussi avec timestamp
 console.log(dateParser(timestamp));
 
