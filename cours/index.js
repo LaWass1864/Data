@@ -1,313 +1,297 @@
-// Types de données
-
-let string = "je suis une phrase";
-let number = 34;
+// Rappel des types de données
+let string = "Chaine";
+let number = 25;
 let boolean = true;
-let maVariable;
+let maVariable; // type Undefined
 
-// Tableaux = crochet
-let array = ["Bordeaux", "Toulouse", "Nantes","Paris"]
-// console.log(array[2][3])
+// Tableaux
+let array = ["Bordeaux", "Toulouse", "Nantes"];
+// console.log(array[0][3]);
 
-let array2 = ["Bordeaux", 24, true , [1,2], {nom: "Mike"}];
+let array2 = ["Bordeaux", 24, true, [1, 2], { nom: "Denis" }];
+// console.log(array2[4].nom);
 
-// console.log(array2[4].nom)
-
-// Creation d'un objet avec index : valeur
 let objet = {
-    pseudo : "Denis",
-    age: 33,
-    technos: ["Javascript", "NodeJs", "php"],
-    admin: false,
-}
-objet.adresse = "89 rue du landy";
-// console.log(objet) 
-// data est un tableau qui abrite des objets
+  pseudo: "Denis",
+  age: 33,
+  technos: ["Javascript", "React", "NodeJs"],
+  admin: false,
+};
+
+// objet.adresse = "22 rue du code";
+// console.log(objet);
+
 let data = [
-    {
-        pseudo : "Denis",
-        age: 33,
-        technos: ["Javascript", "NodeJs", "php"],
-        admin: false,
-    },
-    {
-        pseudo : "Samia",
-        age: 35,
-        technos: ["Css", "Html", "php"],
-        admin: false,
-    }, {
-        pseudo : "Nicolas",
-        age: 42,
-        technos: ["React", "NodeJs", "php"],
-        admin: true,
-    },
-    {
-        pseudo : "Carole",
-        age: 42,
-        technos: ["React", "NodeJs", "php"],
-        admin: true,
-    },
-    {
-        pseudo : "John",
-        age: 42,
-        technos: ["React", "NodeJs", "php"],
-        admin: true,
-    }
+  {
+    pseudo: "Denis",
+    age: 33,
+    technos: ["Javascript", "React", "NodeJs"],
+    admin: false,
+  },
+  {
+    pseudo: "Samia",
+    age: 24,
+    technos: ["CSS", "React", "NodeJs"],
+    admin: false,
+  },
+  {
+    pseudo: "Nikola",
+    age: 42,
+    technos: ["Php", "React", "NodeJs"],
+    admin: true,
+  },
 ];
-// console.log(data[2].technos[2])
-// Se balader dans un objet. On met d'abord le nom du tableau[la position que l'ont choisi].propriété
+// console.log(data[2].pseudo[0]);
 
-if (data[2].technos = data[3].technos) {
-    document.body.style.background = "blue";
-    
-    
-}
+//---------------------------
+// Les structures de controle
+//---------------------------
 if (data[0].age > data[1].age) {
-    // alert(data[0].pseudo + " est plus jeune que " + data[1].pseudo );
-    // valeur si vrai
+  // console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
 } else {
-//    document.body.style.background = "red";
-// valeur si faux
+  // Valeur si faux
 }
 
-// while : tant que
+// While
+let w = 0;
 
-let w = 0; 
-
-while (w < 3) {
-    w++;
-    // alert("la valeur de w est de : " + w);
+while (w < 10) {
+  w++;
+  // console.log("La valeur de w est de : " + w);
 }
 
-// do while 
+// Do while
 let d = 0;
 
 do {
-    d++;
-    // console.log(d)
+  d++;
+  // console.log(d);
 } while (d < 5);
 
-// Boucles for
-// guillemets de la touche 7 permettent de ne pas mettre de + 
-
-for (const user of data ) {
-//    document.body.innerHTML += `<li>${user.pseudo} / ${user.age} ans / ${user.technos} </li>`;
-    
+// Les boucles for
+for (const user of data) {
+  // document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
 }
 
-// d'abord on déclare la valeur de i ensuite jusque ou on boucle et incrementer si la condition 2 n'est pas remplis
+// on déclare la valeur de i | jusqu'où on boucle | on incrémente i si la condition 2 n'est pas remplie
 for (i = 0; i < data.length; i++) {
-    //document.body.innerHTML += "<h2>" + data[i].technos.join (' / ') + "</h2>";
-    
+  // console.log(i);
+  // console.log(data[i].technos[0]);
+  // document.body.innerHTML += "<h2>" + data[i].technos + "</h2>";
 }
 
 // Switch
+document.body.addEventListener("click", (e) => {
+  switch (e.target.id) {
+    case "javascript":
+      document.body.style.background = "yellow";
+      break;
+    case "php":
+      document.body.style.background = "violet";
+      break;
+    case "python":
+      document.body.style.background = "blue";
+      break;
+    default:
+      null;
+  }
+});
 
-document.body.addEventListener('click', (e) => {
-    console.log(e.target.id)
+//----------------
+// Méthodes String
+//----------------
+let string2 = "Javascript est un langage orienté objet";
 
-    switch(e.target.id) {
-        case "javascript":
-            document.body.style.background = "yellow";
-            break;
-        case "php":
-            document.body.style.background = "violet";
-            break;
-        case "python":
-            document.body.style.background = "blue";
-            break;
-            default:
-                null;
+// console.log(typeof "42");
+// console.log(eval(parseInt("1") + 2));
+// console.log(isNaN(string));
 
-    }
-})
+// console.log(string2.length);
+// console.log(string2[string2.length - 1]);
 
-document.body.addEventListener('click', (e) => {
-    
+// console.log(string2.indexOf("langage"));
+// console.log(string2.indexOf("x")); // Retourne -1 s'il ne le connait pas
 
-    switch (e.target.id) {
-        case "hello":
-            document.body.style.background = "pink";
-            break;
-        case "hi":
-            document.body.style.background = "green";
-            break;
-        case "ola":
-            document.body.style.background = "brown";
-            break;    
-        default:
-            null;
-    }
-})
+// let newString = string2.slice(20);
+// let newString = string2.slice(5, 17);
+// console.log(newString);
 
+// console.log(string2.split(" "));
 
-// Méthodes string. Une méthode est une fonction dont on a acces. Comme le addEventListener 
+// console.log(string2.toLowerCase());
+// console.log(string2.toUpperCase());
 
-let string2 = "JavaScript est un langage oriénté objet";
-// parseInt = transforme string en number
-console.log(typeof "42");
-console.log(typeof parseInt("42"));
-// isNan pour distinguer si c'est un chiffre ou non
-console.log(isNaN("--48"));
-// Pour mesurer une chaine de caractere
-console.log(string2.length);
-// Connaitre le dernier caractere de cette chaine
-console.log(string2[string2.length - 9]);
-// Indexof, retourne -1 si il ne connait pas
-console.log(string2.indexOf("é"));
-// il découpe de 15 a 20 caracteres. Utile dans une BDD 
-let newString = string2.slice(15, 20);
-console.log(newString)
-// Split, permet de séparer les variables
-console.log(string2.split("t"))
-// lowerCase : pour les inputs par exemple, cela transforme les données
-console.log(string2.toLocaleUpperCase())
-//Replace
-console.log(string2.replace("JavaScript", "Is the best"))
+// console.log(string2.replace("Javascript", "PHP"));
 
-// Méthodes pour les numbers
-let numbers = 43.289;
+//-----------------
+// Méthodes Numbers
+//-----------------
+
+let number2 = 42.1234;
 let numberString = "42.12 est un chiffre";
-// garder des chiffres aprés la virgule
-console.log(numbers.toFixed(2))
-// Changer une chaine de caractere en number
-console.log(parseInt("24"))
-// pour extraire le chiffre au début
-console.log(parseInt(numberString))
-// on garde la virgule et le nombre
-console.log(parseFloat(numberString))
 
+// console.log(number2.toFixed(1));
+// console.log(parseInt("43"));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
 
-// Mathrandom
+// Math
+// console.log(Math.PI);
+// console.log(Math.round(4.5));
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.1));
+// console.log(Math.pow(2, 7));
+// console.log(Math.sqrt(16));
 
-console.log(Math.PI)
+// console.log(Math.floor(Math.random() * 50));
 
+//-----------------
+// Méthodes Arrays
+//-----------------
 
-// Arrondir au sup
-console.log(Math.round(4.5))
-// arrondire au inf
-console.log(Math.floor(4.5))
-// arrondir au plu haut
-console.log(Math.ceil(4.1))
-// Puissances
-console.log(Math.pow(5, 5))
-// Racine carré
-console.log(Math.sqrt(8))
-// Math.random
-console.log(Math.floor(Math.random() * 50))
-
-// Méthode pour les tableaux
 let array3 = ["Javascript", "Php", "Python"];
 let array4 = ["Ruby", "Solidity"];
-let arrayPrenom = ['Joe','Mickael',"Kevin"]
 
-// Additionner 2 tableaux 
-let newArray = array3.concat(array4)
-console.log(newArray);
-// Spraid operateur
-let newArrayA = [...array3, ...array4]
-console.log(newArrayA)
+// let newArray = array3.concat(array4);
+// console.log(newArray);
 
-// Ajouter des caracteres 
-console.log(array3.join("&"));
+// let newArray = [...array3, ...array4];
+// console.log(newArray);
 
-// Slice = découpage d'un array
-console.log(newArray.slice(3, 5));
+// console.log(array3.join(' '));
 
-// IndexOf
-console.log(array3.indexOf("JavaScript"));
+// console.log(array3.slice(1));
+// console.log(newArray.slice(3, 5));
 
-// Elle foncitonne pour les array 
-// element individuel = langugages
-arrayPrenom.forEach((languages) => console.log(languages));
+// console.log(array3.indexOf("Python"));
 
-// Est ce que dans chacun de ces éléments il y a cet élément
-// every = tous
-console.log(array3.every((language) => language == "P"))
-// Est ce qu'il y a écrit php qql part // au moins un parmis eux
-console.log(array3.some((language) => language == "Php"))
+// array3.forEach((languages) => console.log(languages));
 
-// Shift : permet de suppr le premier index du tableau
-let shift = array3.shift()
-console.log(shift);
-// Pop : permet de suppr le dernier element
-let shiftA = array3.pop()
-console.log(shiftA);
-// Splice : ajouter un élément a un tableau
+// console.log(array3.every((language) => language == "Php"));
+// console.log(array3.some((language) => language == "Php"));
 
-const restArray = array3.splice(0, 2, ..."Cool");
-console.log(restArray)
+// let shift = array3.shift();
+// console.log(array3);
 
-// Important //eps
-let arrayNumber = [10,4,74,28,12,1]
-// additionner de tableaux
-console.log(arrayNumber.reduce((x,y) => x + y))
-// Ajouter un élément dans un tableau
-arrayNumber.push(89)
-console.log(arrayNumber);
+// console.log(array3.pop());
 
+// const restArray = array3.splice(0, 2, ...array4);
+// console.log(array3);
 
-// On nomme le tableau ou lobjet + application de la méthode + (parametre) 
-// Filter SORT MAP
-// le "." c'est comme une addition 
-console.log(arrayNumber.filter((nina) => nina > 10))
-// On l'agrémente souvent de paramétres, ici c'est dans l'ordre croissant
-console.log(arrayNumber.sort((a, b) => a - b));
-// Enumeration de tous les chiffres
-arrayNumber.map((numbers) => (document.body.innerHTML += `<li> ${numbers} </li>`))
-// Le map applique des ','
-document.body.innerHTML = arrayNumber.map((numbers) => `<li> ${numbers} </li>`).join('');
+// IMPORTANT //
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y) => x + y));
+arrayNumber.push(17);
+// console.log(arrayNumber);
 
+// FILTER, SORT, MAP
+// console.log(arrayNumber.filter((number) => number > 10));
+// console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort((a, b) => a - b));
 
-// Methodes pour objet
-// sort = tirer les users par age, c'est un objet, il faut aller se balader dedans
-document.body.innerHTML = data
-// fitlre les membres qui ne sont pas modo
-.filter((user) => user.admin === false)
-.filter((user) => user.pseudo.includes("i"))
-.sort((a, b) => b.age - a.age)
-// Le map affiche les objets
-.map((user) => `
-<div class="user-card">
-    <h2> ${user.pseudo}</h2>
-    <p> ${user.age}</p>
-    <p> Status : ${user.admin ? "Modérateur" : "Membre"}</p>
-</div>
-`).join('');
+// document.body.innerHTML = arrayNumber
+//   .map((number) => `<li>${number}</li>`)
+//   .join("");
 
+//-----------------
+// Méthodes Objects
+//-----------------
+// document.body.innerHTML = data
+//   .filter((user) => user.pseudo.includes("a"))
+//   .sort((a, b) => b.age - a.age)
+//   .map(
+//     (user) =>
+//       `
+//     <div class="user-card">
+//       <h2>${user.pseudo}</h2>
+//       <p>Age : ${user.age} ans</p>
+//       <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+//     </div>
+//   `
+//   )
+//   .join("");
 
+//----------
 // Les dates
+//----------
 
+// Date classique
 let date = new Date();
-console.log(date)
 
-// Timestamp : nb de secondes qui se sont ecoulées depuis 1970 en millisecondes
-// Parse : transformé en millisecondes
-let timestamp = Date.parse(date)
-console.log(timestamp + ' secondes');
+// Timestamp
+let timestamp = Date.parse(date);
+// console.log(timestamp);
 
 // IsoString
-console.log(date.toISOString());
-
-// Comment traiter ces dates
 let iso = date.toISOString();
 
-
-// Creation d'une fonction avec DateParser. Pour afficher un jour, un mois, une année et l'heure
-//aller voir la doc toLocalDateString
 function dateParser(chaine) {
-    let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
-        year: "numeric",
-        month : "long",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-    });
-    return newDate;
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    // hour: "numeric",
+    // minute: "numeric",
+  });
+  return newDate;
 }
-// les 3 formats fonctionnent pour afficher les dates
-console.log(dateParser(date));
-console.log(dateParser(iso));
-// cela fonctionne aussi avec timestamp
-console.log(dateParser(timestamp));
 
+// console.log(dateParser(date));
+// console.log(dateParser(timestamp));
+// console.log(dateParser(iso));
+
+//--------------
+// Destructuring
+//--------------
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"],
+};
+
+const { destVar } = moreData;
+
+// console.log(moreData.destVar);
+// console.log(destVar);
+
+let array5 = [70, 80, 90];
+let [x, y, z] = array5;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+const dateDestructuring = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  let [y, m, d] = newDate.split("-");
+  return [d, m, y].join("/");
+};
+// console.log(dateDestructuring(iso));
+
+//-------------
+// Les Datasets
+//-------------
+
+const h3js = document.getElementById("javascript");
+// on peut avoir besoin de mettre de la Data dans ces balises.
+// Si on ne veut pas utiliser l'ID, on utilise data-set
+// console.log(h3js.dataset.lang);
+
+const h3 = document.querySelectorAll("h3")
+// h3.forEach((language) => console.log(language.dataset.lang))
+
+// REGEX
+// cela permet de tester les chaines de caractères
+let mail = "amwass4@hotmail.com"
+// on recherche et on la remplace par qql chose
+// console.log(mail.replace(/4/, "lawass"));
+// le I nous protege contre la casesensisitve , c'est une bonne pratique pour le controle des MDP
+// console.log(mail.match(/[w]/i));
+// console.log(mail.match(/[1234]/i));
+// // tous les chiffres
+// console.log(mail.match(/\d/));
+// // Faire matcher toutes les lettres
+// console.log(mail.match(/[a-z]/));
+// Controler un mail , on termine aevc le I pour etre insensible a la casse, on débute avec le ^ pour controler
+console.log(mail.match(/^[\w_-]+@[\w-]+.[a-z]{2,4}$/i));
+let separator = 263789275
+
+console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "$"));
