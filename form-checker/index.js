@@ -8,9 +8,25 @@ const emailChecker = () => {};
 const passwordChecker = () => {};
 const confirmChecker = () => {};
 
+
 // récupérer les data avec le (e)
 inputs.forEach((input) => {
     input.addEventListener("input", (e) => {
-        console.log(e.target.id);
+        switch (e.target.id) {
+            case "pseudo":
+                pseudoChecker()
+                break;
+            case "email":
+                emailChecker()
+                break;
+            case "password":
+                passwordChecker()
+                break;
+            case "confirm":
+                confirmChecker();
+                break;
+            default:
+                nul;
+        }
     });
 });
