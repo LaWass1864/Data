@@ -6,7 +6,7 @@ let wordIndex = 0;
 let letterIndex = 0;
 
 // Données dans un tableau
-let array = ["développeuse", "photographe", "créative"];
+let array = ["développeuse", "réveuse", "créative"];
 
 // creation de la fonction qui va écrire des mots
 const createLetter = () => {
