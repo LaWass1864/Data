@@ -4,7 +4,9 @@ const inputs = document.querySelectorAll(
 );
 
 const progressBar = document.getElementById("progress-bar");
+const form = document.querySelector("form");
 
+// Variables pour y stocker les différentes DATA
 let pseudo, email, password, confirmPass;
 // On va coder une fonction qui prend toute la logique de l'affichage
 const errorDisplay = (tag, message, valid) => {
@@ -53,7 +55,7 @@ const emailChecker = (value) => {
 
 // Checker si c'est au bout format
 const passwordChecker = (value) => {
-    progressBar.classList = "";
+  progressBar.classList = "";
   // Controle du password maj + 8 caractères speciaux + un chiffre
   if (
     !value.match(
@@ -75,16 +77,18 @@ const passwordChecker = (value) => {
     errorDisplay("password", "", true);
     password = value;
   }
+  if (confirmPass) confirmChecker(confirmPass);
 };
+
 const confirmChecker = (value) => {
-  if(value !== password) {
-    errorDisplay('confirm', "Les mots de passe ne correspondent pas")^;
+  if (value !== password) {
+    errorDisplay("confirm", "Les mots de passe ne correspondent pas");
     confirmPass = false;
   } else {
-    errorDisplay("confirm", "" , true );
+    errorDisplay("confirm", "", true);
     confirmPass = true;
   }
-  };
+};
 
 // récupérer les data avec le (e) et pour chacun d'eux on adosser un addEventListener a chaque input
 inputs.forEach((input) => {
@@ -108,4 +112,29 @@ inputs.forEach((input) => {
         nul;
     }
   });
+});
+
+form.addEventListener("submit", (e) => {
+  // se prevenir contre le rechargement de la apge
+  e.preventDefault();
+
+  if (pseudo && email && email && confirmPass) {
+    // on envoi tous les elements dans la console dans un objet
+    const data = {
+      pseudo,
+      email,
+      password,
+    };
+    console.log(data);
+    // pour vider les inputs et la prgressbar aprés valdiation du formulaire
+    progressBar.classList = "";
+    inputs.forEach((input) => (input.value = ""));
+    pseudo = null;
+    email = null;
+    password = null;
+    confirmPass = null;
+    alert("Inscription validée !");
+  } else {
+    alert("Veuillez remplir correctement les informations");
+  }
 });
