@@ -1,0 +1,17 @@
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition:1s linear;
+}
+
+h2 {
+    margin: 0;
+    background: black;
+    border-radius: 10px;
+    color: azure;
+    padding: 20px;
+}
