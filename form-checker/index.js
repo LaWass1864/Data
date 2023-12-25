@@ -93,7 +93,7 @@ const confirmChecker = (value) => {
 // récupérer les data avec le (e) et pour chacun d'eux on adosser un addEventListener a chaque input
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
-    //   Le role du switch est de tester la velur de e.target.id
+    //   Le role du switch est de tester la valeur de e.target.id
     switch (e.target.id) {
       case "pseudo":
         // il faut jouer la fonction pseudoChecker

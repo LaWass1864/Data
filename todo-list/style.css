@@ -1,0 +1,53 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(57, 108, 97);
+}
+form {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  padding: 0.7rem;
+  position: relative;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+ul li:before {
+  content: "✽";
+  padding: 0.6rem;
+  font-size: 1.3rem;
+  color: #fd4a1d;
+}
+ul li:after {
+  opacity: 0;
+}
+ul li:hover:after {
+  content: " (terminé)";
+  opacity: 0;
+  font-size: 1.1rem;
+  color: #fd4a1d;
+  font-style: italic;
+  animation: pseudoClassAnim 1s forwards;
+}
+li.checked:before {
+  content: "✔";
+  padding: 10px 10px;
+  font-size: 1.1rem;
+  color: #fd4a1d;
+}
+li.checked:hover:after {
+  content: " (supprimer)";
+  font-size: 1.1rem;
+  color: #fd4a1d;
+  opacity: 0;
+}
