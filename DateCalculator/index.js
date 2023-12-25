@@ -11,7 +11,7 @@ let tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 // Convertir au bon format
 let tomorrowFormat = tomorrow.toISOString().split("T")[0];
-// On le passe a l'input
+// On le passe a l'input au bon format
 end_date.value = tomorrowFormat;
 // Eviter de reserver une dans le passé
 end_date.min = tomorrowFormat;
