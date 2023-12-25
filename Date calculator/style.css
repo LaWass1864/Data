@@ -7,10 +7,10 @@
   }
   
   body {
-    background: url(https://i.ibb.co/tmvQ62T/railay-beach-thailand-4k-wallpaper.jpg) center/cover;
+    background-color: #0f0e17;
     min-height: 100vh;
     text-align: center;
-    color: #3e51bd;
+    color: #fffffe;
     display: -ms-grid;
     display: grid;
     -webkit-box-align: center;
@@ -20,7 +20,7 @@
   }
   
   body .card {
-    background: rgba(228, 229, 230, 0.8);
+    background: #f25f4c;
     padding: 30px;
     margin: 0 auto;
     min-width: 300px;
@@ -34,7 +34,7 @@
   body .card div {
     margin: 20px 0 40px 0;
     font-size: 1.1rem;
-    color: black;
+    color: #a7a9be;
   }
   
   body .card h2 {
@@ -62,13 +62,13 @@
   }
   
   body .card button {
-    background: #3e51bd;
+    background: #ff8906;
     border-radius: 20px;
     outline: 0;
     border: none;
     padding: 1rem;
     margin: 10px 0;
-    color: white;
+    color: #fffffe;
     font-size: 1.3rem;
     letter-spacing: 1px;
   }
