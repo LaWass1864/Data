@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Bacasime+Antique:regular);
+
+body {
+  min-height: 100vh;
+  font-family: "Bacasime", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 3rem;
+}
+#target {
+  display: flex;
+  margin-left: 1rem;
+  position: relative;
+  
+}
+#target::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  width: 5px;
+  background: yellow;
+  top: -6px;  
+  right: -5px;
+  animation: anim 0.8s linear infinite;
+}
+
+span {
+  color:rgb(39, 48, 147);
+}
+
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
