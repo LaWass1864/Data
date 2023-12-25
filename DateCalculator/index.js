@@ -7,9 +7,9 @@ start_date.min = today;
 
 // Tomorrow date calc
 let tomorrow = new Date();
-// Ajouter un jour de plus
+// Ajouter un jour de plus que le start_date
 tomorrow.setDate(tomorrow.getDate() + 1);
-// Convert to input format
+// Convertir au bon format
 let tomorrowFormat = tomorrow.toISOString().split("T")[0];
 // On le passe a l'input
 end_date.value = tomorrowFormat;
