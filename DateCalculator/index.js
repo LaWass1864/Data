@@ -5,7 +5,7 @@ start_date.value = today;
 // Eviter de reserver une date dans le passé
 start_date.min = today;
 
-// Tomorrow date calc
+// Calcul de la end_date
 let tomorrow = new Date();
 // Ajouter un jour de plus que le start_date
 tomorrow.setDate(tomorrow.getDate() + 1);
