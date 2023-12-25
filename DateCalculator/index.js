@@ -1,4 +1,4 @@
-// Convertir la date du jour comme on la souhaite dans l'Input
+// Convertir la date du jour comme on la souhaite dans l'Input avec le bon format
 const today = new Date().toISOString().split("T")[0];
 // On donne cette valeur a l'input start-date
 start_date.value = today;
